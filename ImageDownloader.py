@@ -5,13 +5,13 @@ from PIL import Image
 from io import BytesIO
 from tqdm import tqdm
 
-# Load CSV
+# to load CSV
 image_df = pd.read_csv("images.csv")
 
 # Output directory
 os.makedirs("images", exist_ok=True)
 
-# Headers to mimic browser
+# headers to mimic browser
 headers = {"User-Agent": "Mozilla/5.0"}
 
 # Keep track of saved filenames to avoid duplicates
@@ -36,9 +36,9 @@ for i, row in tqdm(image_df.iterrows(), total=len(image_df)):
         response.raise_for_status()
         image = Image.open(BytesIO(response.content)).convert("RGB")
         image.save(filepath)
-        print(f"✅ Saved: {filename}")
+        print(f"Saved: {filename}")
     except Exception as e:
-        print(f"❌ Failed: {url} — {e}")
+        print(f"Failed: {url} — {e}")
         failure_log.write(f"{image_id},{url}\n")
 
 failure_log.close()
