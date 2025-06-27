@@ -1,0 +1,7 @@
+frames/
+images/
+video_inputs/
+/images.csv
+/product_data.xlsx
+__pycache__/
+venv/

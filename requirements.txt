@@ -1,0 +1,14 @@
+ultralytics
+pandas
+faiss-cpu
+numpy
+open_clip_torch
+pillow
+fastapi
+uvicorn
+opencv-python
+tqdm
+requests
+openai-whisper
+python-multipart
+transformers
